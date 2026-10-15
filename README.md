@@ -2,13 +2,39 @@
 
 Homebrew casks for tools by [ingvarch](https://github.com/ingvarch).
 
+## Install
+
 ```sh
-brew install ingvarch/tap/urga
+brew install ingvarch/tap/<cask>
 ```
 
+Or tap once and then install by the short name:
+
+```sh
+brew tap ingvarch/tap
+brew install urga
+```
+
+## Casks
+
+<!-- casks:start -->
 | Cask | What it is |
 | --- | --- |
+| [azt](https://github.com/ingvarch/azt) | Terminal UI for Azure |
+| [tent](https://github.com/ingvarch/tent) | Provision and operate HashiCorp Nomad clusters on cloud providers |
 | [urga](https://github.com/ingvarch/urga) | Terminal UI for HashiCorp Nomad |
+<!-- casks:end -->
 
-The casks in `Casks/` are written by each project's release and are not
-edited here: a change by hand is gone after the next release.
+## How this repo is updated
+
+Each project's release writes its cask to `Casks/` with GoReleaser. Do not
+edit the casks here: a change by hand is gone after the next release. To change
+a cask's description, change it in that project's GoReleaser config.
+
+After every change in `Casks/`, the `README` workflow rebuilds the table above
+with `script/update_readme.rb` and commits it. To rebuild it locally:
+
+```sh
+ruby script/update_readme.rb
+ruby test/update_readme_test.rb
+```

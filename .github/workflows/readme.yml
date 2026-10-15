@@ -1,0 +1,38 @@
+name: README
+
+on:
+  push:
+    branches: [main]
+    paths: ["Casks/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# One run at a time, so each run starts from the README the previous one pushed.
+concurrency:
+  group: readme
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - run: ruby test/update_readme_test.rb
+
+      - run: ruby script/update_readme.rb
+
+      - name: Commit if changed
+        run: |
+          git diff --quiet README.md && exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "docs(readme): update cask list"
+          # A release may have pushed a cask since checkout.
+          git pull --rebase origin main
+          git push origin HEAD:main
