@@ -15,14 +15,14 @@ module UpdateReadme
 
   def table(casks)
     rows = casks.map { |text| parse(text) }.sort_by { |c| c[:token] }.map do |c|
-      "| [#{c[:token]}](#{c[:homepage]}) | #{c[:desc]} |\n"
+      "| [#{c[:token]}](#{c[:homepage]}) | #{c[:version]} | #{c[:desc]} |\n"
     end
-    "| Cask | What it is |\n| --- | --- |\n#{rows.join}"
+    "| Cask | Version | What it is |\n| --- | --- | --- |\n#{rows.join}"
   end
 
   def parse(text)
     token = text[/^cask "([^"]+)"/, 1]
-    %i[desc homepage].to_h do |key|
+    %i[version desc homepage].to_h do |key|
       [key, text[/^\s*#{key} "(.*)"$/, 1] || raise("cask #{token} has no #{key}")]
     end.merge(token: token)
   end
