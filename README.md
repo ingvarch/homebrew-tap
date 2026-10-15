@@ -5,15 +5,10 @@ Homebrew casks for tools by [ingvarch](https://github.com/ingvarch).
 ## Install
 
 ```sh
-brew install ingvarch/tap/<cask>
+brew install ingvarch/tap/urga
 ```
 
-Or tap once and then install by the short name:
-
-```sh
-brew tap ingvarch/tap
-brew install urga
-```
+Any cask from the table below installs the same way.
 
 ## Casks
 
