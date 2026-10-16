@@ -15,7 +15,7 @@ Any cask from the table below installs the same way.
 <!-- casks:start -->
 | Cask | Version | What it is |
 | --- | --- | --- |
-| [azt](https://github.com/ingvarch/azt) | 0.2.0 | Terminal UI for Azure |
+| [azt](https://github.com/ingvarch/azt) | 0.3.0 | Terminal UI for Azure |
 | [tent](https://github.com/ingvarch/tent) | 0.2.0 | Provision and operate HashiCorp Nomad clusters on cloud providers |
 | [urga](https://github.com/ingvarch/urga) | 0.14.0 | Terminal UI for HashiCorp Nomad |
 <!-- casks:end -->
