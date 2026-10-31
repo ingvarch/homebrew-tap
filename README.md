@@ -17,7 +17,7 @@ Any cask from the table below installs the same way.
 | --- | --- | --- |
 | [azt](https://github.com/ingvarch/azt) | 0.3.0 | Terminal UI for Azure |
 | [kraken](https://github.com/ingvarch/kraken) | 0.2.0 | Bump the version, tag the release and push it |
-| [taert](https://github.com/ingvarch/taert) | 0.3.0 | Fast, transparent, and keyboard-driven macOS disk cleanup and storage explorer |
+| [taert](https://github.com/ingvarch/taert) | 0.4.0 | Fast, transparent, and keyboard-driven macOS disk cleanup and storage explorer |
 | [tent](https://github.com/ingvarch/tent) | 0.2.0 | Provision and operate HashiCorp Nomad clusters on cloud providers |
 | [urga](https://github.com/ingvarch/urga) | 0.16.0 | Terminal UI for HashiCorp Nomad |
 <!-- casks:end -->
