@@ -19,7 +19,7 @@ Any cask from the table below installs the same way.
 | [kraken](https://github.com/ingvarch/kraken) | 0.4.0 | Bump the version, tag the release and push it |
 | [taert](https://github.com/ingvarch/taert) | 0.12.0 | Fast, transparent, and keyboard-driven macOS disk cleanup and storage explorer |
 | [tent](https://github.com/ingvarch/tent) | 0.2.0 | Provision and operate HashiCorp Nomad clusters on cloud providers |
-| [urga](https://github.com/ingvarch/urga) | 0.17.0 | Terminal UI for HashiCorp Nomad |
+| [urga](https://github.com/ingvarch/urga) | 0.18.0 | Terminal UI for HashiCorp Nomad |
 <!-- casks:end -->
 
 ## How this repo is updated
